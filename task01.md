@@ -1,9 +1,12 @@
 ## Лабораторная работа 1. Подготовка окружения для выполнения заданий
 ### Настройка GitHub и Git
 * Зарегистрироваться на GitHub. Сделать форк своего репозитория  из https://github.com/andpop-mrsu.
-* Установить и выполнить первичную настройку Git на локальной машине (`git configure --global user.name`, `git configure --global user.email`).
+* Установить и выполнить первичную настройку Git на локальной машине (`git config --global user.name`, `git config --global user.email`).
 * Склонировать "форкнутый" репозиторий из своего профиля GitHub на локальную машину (`git clone`). При этом удаленный репозиторий в вашем профиле будет привязан под именем *origin*.
-* Добавить привязку к оригинальному репозиторию под именем *upstream* (`git remote add upstream https://github.com/andpop-mrsu/302_XXX_XX.git`).
+* Настроить аутентификацию для выполнения операций на GitHub с помощью SSH-ключей или персонального токена доступа (Personal Access Token, PAT).
+    * Для доступа к GitHub по SSH нужно сгенерировать на локальной машине закрытый и открытый ключи SSH и зарегистрировать открытый ключ в своем профиле на GitHub (раздел SSH and GPG keys).
+    * Для доступа к GitHub по PAT нужно сгенерировать новый токен на GitHub в разделе Developer settings/Personal access tokens/Tokens (classic), скопировать его в буфер и выполнить команду `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git` Вместо выражения в угловых скобках подставить соответсвующие значения.
+* Добавить привязку к оригинальному репозиторию под именем *upstream* (`git remote add upstream https://github.com/andpop-mrsu/302_OOP_XXX_XX.git`).
 * Создать в локальном репозитории ветку Task01. Далее работать в этой ветке.
 
 ### Установка PHP
@@ -33,6 +36,6 @@
     * Д. Скляр, А. Трахтенберг "PHP. Рецепты программирования", 3-е изд., глава 26. СПб.: Питер, 2015.
 * Система управления версиями Git.
     * <https://git-scm.com/book/ru/v2/> S.Chacon, B. Straub "Pro Git". Электронная книга про Git (перевод на русский язык).
-    * <https://learn.javascript.ru/screencast/git> Скринкаст Ильи Кантора по Git.
+    * <https://youtu.be/XeK0UylJYu8?list=PLDyvV36pndZEgSRzWGuXFrTRUFuAAMciE> Крэш-курс по Git и GitHub от Ильи Кантора
 * Веб-сервис GitHub для хостинга IT-проектов и их совместной разработки
     * <https://youtu.be/pUT3mx1ZRUМ> "Pull request в опенсорс" от Hexlet. Инструкция по работе с Pull Request для добавления своего кода в open-source проекты (наша процедура отчетности организована точно по такой же схеме).   
