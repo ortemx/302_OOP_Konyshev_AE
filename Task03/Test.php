@@ -82,7 +82,7 @@ function runTest()
 
     // Проверка метода store()
 
-    $fileName = "students.txt";
+    $fileName = "students";
     if ($studentsList->store($fileName)) {
         printf("Проверка метода store() прошла УСПЕШНО\n");
     } else {
