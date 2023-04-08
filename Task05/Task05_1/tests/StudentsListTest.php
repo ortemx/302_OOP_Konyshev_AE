@@ -27,6 +27,12 @@ class StudentsListTest extends TestCase
         $studentsList->add($this->student1);
         $studentsList->add($this->student2);
         $this->assertSame($this->student1, $studentsList->current());
+
+        foreach($studentsList as $student) {
+            printf("id = %d\n", $student->getId());
+        }
+
+        printf("count = %d\n", $studentsList->count());
     }
 
     public function testNext(): void
@@ -40,6 +46,12 @@ class StudentsListTest extends TestCase
         $this->assertSame($this->student2, $studentsList->current());
         $studentsList->next();
         $this->assertSame($this->student3, $studentsList->current());
+
+        foreach($studentsList as $student) {
+            printf("id = %d\n", $student->getId());
+        }
+
+        printf("count = %d\n", $studentsList->count());
     }
 
     public function testValid(): void
