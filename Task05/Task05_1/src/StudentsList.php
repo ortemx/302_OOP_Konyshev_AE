@@ -53,7 +53,7 @@ class StudentsList implements Iterator
     {
         return current($this->students)->getId();
     }
-    
+
     public function next(): void
     {
         next($this->students);
