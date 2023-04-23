@@ -13,7 +13,7 @@ ProductCollection         // Класс для коллекции товаров
 ProductFilteringStrategy  // Интерфейс для стратегии фильтрации
 ```
 1. Нужно реализовать возможность фильтрации списка товаров из общего списка по различным критериям, применяя для этого паттерн "Strategy".
-* Создать классы, реализующие интерфейс `ProductFilteringStrtegy`:
+* Создать классы, реализующие интерфейс `ProductFilteringStrategy`:
     * `ManufacturerFilter`. Фильтр по производителю товаров.
     * `MaxPriceFilter`. Фильтр по максимальной цене товара (если для товара задана скидка, то ее нужно учитывать).
 * Дописать метод `ProductCollection->filter(ProductFilteringStrategy $filterStrategy): ProductCollection`, принимающий экземпляр конкретного фильтра и возвращающий экземпляр класса `ProductCollection` для отфильтрованного списка товаров.

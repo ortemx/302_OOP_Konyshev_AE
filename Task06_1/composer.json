@@ -1,0 +1,15 @@
+{
+  "name": "andrey/01_strategy",
+  "authors": [
+    {
+      "name": "Andrey Popov",
+      "email": "andpop@mail.ru"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
