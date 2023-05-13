@@ -17,23 +17,23 @@ describe('createVector', () => {
         expect(new createVector(0, 1, 0).getLength()).toBe(1);
     });
     test('add()', () => {
-        expect(vector1.add(vector2).toString()).toBe('(2, 8, 2)');
+        expect(vector1.add(vector2).toString()).toBe('(2;8;2)');
     });
 
     test('sub()', () => {
-        expect(vector1.sub(vector2).toString()).toBe('(-14, 10, -6)');
-        expect(vector2.sub(vector1).toString()).toBe('(14, -10, 6)');
-        expect(vector1.sub(vector1).toString()).toBe('(0, 0, 0)');
+        expect(vector1.sub(vector2).toString()).toBe('(-14;10;-6)');
+        expect(vector2.sub(vector1).toString()).toBe('(14;-10;6)');
+        expect(vector1.sub(vector1).toString()).toBe('(0;0;0)');
         expect(vector1.sub(vector0).toString()).toBe(vector1.toString());
     });
 
     test('product()', () => {
         let n = 3;
-        expect(vector1.product(n).toString()).toBe('(-18, 27, -6)');
+        expect(vector1.product(n).toString()).toBe('(-18;27;-6)');
         n = -3;
-        expect(vector1.product(n).toString()).toBe('(18, -27, 6)');
+        expect(vector1.product(n).toString()).toBe('(18;-27;6)');
         n = 0;
-        expect(vector1.product(n).toString()).toBe('(0, 0, 0)');
+        expect(vector1.product(n).toString()).toBe('(0;0;0)');
     });
 
     test('scalarProduct()', () => {
@@ -42,11 +42,11 @@ describe('createVector', () => {
     });
 
     test('vectorProduct()', () => {
-        expect(vector1.vectorProduct(vector2).toString()).toBe('(34, 8, -66)');
-        expect(vector2.vectorProduct(vector1).toString()).toBe('(-34, -8, 66)');
+        expect(vector1.vectorProduct(vector2).toString()).toBe('(34;8;-66)');
+        expect(vector2.vectorProduct(vector1).toString()).toBe('(-34;-8;66)');
     });
 
     test('toString()', () => {
-        expect(vector1.toString()).toBe('(-6, 9, -2)');
+        expect(vector1.toString()).toBe('(-6;9;-2)');
     });
 });
