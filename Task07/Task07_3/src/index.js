@@ -74,6 +74,6 @@ export default class Vector {
      * @return {string} A string in the format "(x, y, z)".
      */
     toString() {
-        return `(${this.x}, ${this.y}, ${this.z})`;
+        return `(${this.x};${this.y};${this.z})`;
     }
 }
